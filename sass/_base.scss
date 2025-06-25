@@ -18,6 +18,10 @@
   --line: solid 1px var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; //1200px  (1200/16)
+$bp-large: 68.75em; //1100px (1100/16)
+$bp-medium: 56.25em; //900px (900/16)
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +36,10 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; //1rem = 16px (100%), therefore for 1rem to be 10px we do -- 10/16 (62.5%)
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; // 1rem = 8px  (8/16  = .5)
+  }
 }
 
 body {
